@@ -14,7 +14,8 @@ ch.setFormatter(formatter)
 logger.addHandler(ch)
 
 DATASET_FILE = 'boston_housing.txt'
-TRAIN_COUNT = 400
+TRAIN_COUNT = 100
+ALPHAS = [1e-2, 1e-1, 1, 1e1, 1e2]
 
 
 def format_data(filename):
@@ -41,12 +42,13 @@ def format_data(filename):
 
 x_train, y_train, x_test, y_test = format_data(DATASET_FILE)
 
-model = linear_model.LinearRegression()
+model = linear_model.LassoCV(cv=5, alphas=ALPHAS)
 model.fit(x_train, y_train)
 y_pred = model.predict(x_test)
 
-print("Linear Regression Model")
+print("Lasso Regression Model")
 print("Dataset file: {}".format(DATASET_FILE))
 print("Training set count: {}".format(TRAIN_COUNT))
 print("Mean squared error: {:.2f}".format(mean_squared_error(y_test, y_pred)))
+print("Alpha selected: {}".format(model.alpha_))
 print("Coefficients: {}".format(model.coef_))

@@ -1,0 +1,26 @@
+Linear Regression Model
+Dataset file: boston_housing.txt
+Training set count: 400
+Mean squared error: 32.35
+Coefficients: [-1.22913946e-01  5.54387203e-02 -2.73833661e-02  2.02092045e+00
+ -1.80006989e+01  3.35056510e+00  6.45782479e-03 -1.58106049e+00
+  2.95823512e-01 -1.19302972e-02 -9.50429485e-01  9.37748679e-03
+ -5.25989764e-01
+
+Ridge Regression Model
+Dataset file: boston_housing.txt
+Training set count: 20
+Mean squared error: 42.92
+Alpha selected: 100.0
+Coefficients: [-0.08604657  0.07246918 -0.27276622  0.01771437 -0.01299467 -0.18886717
+  0.13652611 -0.0266786   0.43865568 -0.01283063 -0.24636572  0.02501399
+ -0.8293609 ]
+
+Lasso Regression Model
+Dataset file: boston_housing.txt
+Training set count: 100
+Mean squared error: 35.43
+Alpha selected: 1.0
+Coefficients: [-0.02855645  0.01401334 -0.29965601  0.         -0.          0.18372494
+  0.0609297  -0.29113499  0.28933303 -0.01288244 -0.2158353   0.00994401
+ -0.77621185
