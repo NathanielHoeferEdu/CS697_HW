@@ -1,0 +1,41 @@
+2018-10-20 13:37:06,828 - hw3: zip.train entry rows: 7291, columns: 256, shape: (7291, 256)
+2018-10-20 13:37:06,829 - hw3:  -- First 10 features of first entry: [-1.    -1.    -1.    -1.    -1.    -1.    -1.    -0.631  0.862 -0.167]
+2018-10-20 13:37:06,829 - hw3: zip.train labels count: 7291, shape: (7291,)
+2018-10-20 13:37:06,829 - hw3:  -- First 10 labels: [6 5 4 7 3 6 3 1 0 1]
+2018-10-20 13:37:06,913 - hw3: zip.test entry rows: 2007, columns: 256, shape: (2007, 256)
+2018-10-20 13:37:06,914 - hw3:  -- First 10 features of first entry: [-1.    -1.    -1.    -1.    -1.    -0.948 -0.561  0.148  0.384  0.904]
+2018-10-20 13:37:06,914 - hw3: zip.test labels count: 2007, shape: (2007,)
+2018-10-20 13:37:06,914 - hw3:  -- First 10 labels: [9 6 3 6 6 0 0 0 6 9]
+
+K-Nearest Neighbor Classifier Model with 3 nearest neighbors
+ -- Mean squared error: 1.000997
+K-Nearest Neighbor Classifier Model with 5 nearest neighbors
+ -- Mean squared error: 1.000000
+K-Nearest Neighbor Classifier Model with 7 nearest neighbors
+ -- Mean squared error: 1.113602
+
+Decision Tree Classifier Model with 1 nearest neighbors
+ -- Mean squared error: 2.836074
+Decision Tree Classifier Model with 3 nearest neighbors
+ -- Mean squared error: 2.816642
+Decision Tree Classifier Model with 5 nearest neighbors
+ -- Mean squared error: 2.837070
+Decision Tree Classifier Model with 10 nearest neighbors
+ -- Mean squared error: 2.675635
+Decision Tree Classifier Model with 20 nearest neighbors
+ -- Mean squared error: 2.820130
+Decision Tree Classifier Model with 100 nearest neighbors
+ -- Mean squared error: 4.544096
+
+Random Forest Classifier Model with 1 estimators
+ -- Mean squared error: 4.005481
+Random Forest Classifier Model with 3 estimators
+ -- Mean squared error: 2.784255
+Random Forest Classifier Model with 5 estimators
+ -- Mean squared error: 2.109616
+Random Forest Classifier Model with 10 estimators
+ -- Mean squared error: 1.532636
+Random Forest Classifier Model with 20 estimators
+ -- Mean squared error: 1.036373
+Random Forest Classifier Model with 100 estimators
+ -- Mean squared error: 0.844544

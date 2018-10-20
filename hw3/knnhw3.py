@@ -29,7 +29,7 @@ def format_data(filename):
     x_cols = len(entries[0])
     x_shape = entries.shape
     y_len = len(labels)
-    y_shape = entries.shape
+    y_shape = labels.shape
 
     logger.debug("{} entry rows: {}, columns: {}, "
                  "shape: {}".format(filename, x_rows, x_cols, x_shape))

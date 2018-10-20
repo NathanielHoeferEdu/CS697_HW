@@ -1,7 +1,7 @@
 import logging
 
 import pandas as pd
-from sklearn import tree
+from sklearn import ensemble
 from sklearn.metrics import mean_squared_error
 
 logger = logging.getLogger('hw3')
@@ -15,7 +15,7 @@ logger.addHandler(ch)
 
 TRAIN_DATASET = 'zip.train'
 TEST_DATASET = 'zip.test'
-MIN_SAMPLES = [1, 3, 5, 10, 20, 100]
+N_ESTIMATORS = [1, 3, 5, 10, 20, 100]
 
 
 def format_data(filename):
@@ -39,14 +39,14 @@ def format_data(filename):
 
     return (entries, labels)
 
-def train_decision_tree(min_samples, x_train, y_train,
-                              x_test, y_test):
-    model = tree.DecisionTreeClassifier(min_samples_leaf=min_samples)
+def train_random_forest(n_estimators, x_train, y_train,
+                        x_test, y_test):
+    model = ensemble.RandomForestClassifier(n_estimators=n_estimators)
     model.fit(x_train, y_train)
     y_pred = model.predict(x_test)
 
-    print("Decision Tree Classifier Model with {} nearest "
-          "neighbors".format(min_samples))
+    print("Random Forest Classifier Model with {} "
+          "estimators".format(n_estimators))
     print(" -- Mean squared error: "
           "{:.6f}".format(mean_squared_error(y_test, y_pred)))
 
@@ -55,5 +55,5 @@ if __name__ == '__main__':
     x_train, y_train = format_data(TRAIN_DATASET)
     x_test, y_test = format_data(TEST_DATASET)
 
-    for num in MIN_SAMPLES:
-        train_decision_tree(num, x_train, y_train, x_test, y_test)
+    for num in N_ESTIMATORS:
+        train_random_forest(num, x_train, y_train, x_test, y_test)
