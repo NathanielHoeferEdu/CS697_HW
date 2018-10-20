@@ -1,7 +1,7 @@
 import logging
 
 import pandas as pd
-from sklearn import neighbors
+from sklearn import tree
 from sklearn.metrics import mean_squared_error
 
 logger = logging.getLogger('hw3')
@@ -15,7 +15,7 @@ logger.addHandler(ch)
 
 TRAIN_DATASET = 'zip.train'
 TEST_DATASET = 'zip.test'
-NEAREST_NEIGHBORS = [3, 5, 7]
+MIN_SAMPLES = [1, 3, 5, 10, 20, 100]
 
 
 def format_data(filename):
@@ -39,14 +39,14 @@ def format_data(filename):
 
     return (entries, labels)
 
-def train_k_nearest_neighbors(nearest_neighbor_num, x_train, y_train,
+def train_decision_tree(min_samples, x_train, y_train,
                               x_test, y_test):
-    model = neighbors.KNeighborsClassifier(n_neighbors=nearest_neighbor_num)
+    model = tree.DecisionTreeClassifier(min_samples_leaf=min_samples)
     model.fit(x_train, y_train)
     y_pred = model.predict(x_test)
 
-    print("K-Nearest Neighbor Classifier Model with {} nearest "
-          "neighbors".format(nearest_neighbor_num))
+    print("Decision Tree Classifier Model with {} nearest "
+          "neighbors".format(min_samples))
     print(" -- Mean squared error: "
           "{:.6f}".format(mean_squared_error(y_test, y_pred)))
 
@@ -55,5 +55,5 @@ if __name__ == '__main__':
     x_train, y_train = format_data(TRAIN_DATASET)
     x_test, y_test = format_data(TEST_DATASET)
 
-    for num in NEAREST_NEIGHBORS:
-        train_k_nearest_neighbors(num, x_train, y_train, x_test, y_test)
+    for num in MIN_SAMPLES:
+        train_decision_tree(num, x_train, y_train, x_test, y_test)
