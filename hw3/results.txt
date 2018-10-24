@@ -8,34 +8,49 @@
 2018-10-20 13:37:06,914 - hw3:  -- First 10 labels: [9 6 3 6 6 0 0 0 6 9]
 
 K-Nearest Neighbor Classifier Model with 3 nearest neighbors
- -- Mean squared error: 1.000997
+ -- Total: 2007, Correctly Predicted: 1896
+ -- Error Percentage: 5.5306%
 K-Nearest Neighbor Classifier Model with 5 nearest neighbors
- -- Mean squared error: 1.000000
+ -- Total: 2007, Correctly Predicted: 1896
+ -- Error Percentage: 5.5306%
 K-Nearest Neighbor Classifier Model with 7 nearest neighbors
- -- Mean squared error: 1.113602
+ -- Total: 2007, Correctly Predicted: 1890
+ -- Error Percentage: 5.8296%
 
 Decision Tree Classifier Model with 1 nearest neighbors
- -- Mean squared error: 2.836074
+ -- Total: 2007, Correctly Predicted: 1668
+ -- Error Percentage: 16.8909%
 Decision Tree Classifier Model with 3 nearest neighbors
- -- Mean squared error: 2.816642
+ -- Total: 2007, Correctly Predicted: 1677
+ -- Error Percentage: 16.4425%
 Decision Tree Classifier Model with 5 nearest neighbors
- -- Mean squared error: 2.837070
+ -- Total: 2007, Correctly Predicted: 1682
+ -- Error Percentage: 16.1933%
 Decision Tree Classifier Model with 10 nearest neighbors
- -- Mean squared error: 2.675635
+ -- Total: 2007, Correctly Predicted: 1651
+ -- Error Percentage: 17.7379%
 Decision Tree Classifier Model with 20 nearest neighbors
- -- Mean squared error: 2.820130
+ -- Total: 2007, Correctly Predicted: 1650
+ -- Error Percentage: 17.7877%
 Decision Tree Classifier Model with 100 nearest neighbors
- -- Mean squared error: 4.544096
+ -- Total: 2007, Correctly Predicted: 1513
+ -- Error Percentage: 24.6139%
 
 Random Forest Classifier Model with 1 estimators
- -- Mean squared error: 4.005481
+ -- Total: 2007, Correctly Predicted: 1585
+ -- Error Percentage: 21.0264%
 Random Forest Classifier Model with 3 estimators
- -- Mean squared error: 2.784255
+ -- Total: 2007, Correctly Predicted: 1685
+ -- Error Percentage: 16.0438%
 Random Forest Classifier Model with 5 estimators
- -- Mean squared error: 2.109616
+ -- Total: 2007, Correctly Predicted: 1764
+ -- Error Percentage: 12.1076%
 Random Forest Classifier Model with 10 estimators
- -- Mean squared error: 1.532636
+ -- Total: 2007, Correctly Predicted: 1824
+ -- Error Percentage: 9.1181%
 Random Forest Classifier Model with 20 estimators
- -- Mean squared error: 1.036373
+ -- Total: 2007, Correctly Predicted: 1854
+ -- Error Percentage: 7.6233%
 Random Forest Classifier Model with 100 estimators
- -- Mean squared error: 0.844544
+ -- Total: 2007, Correctly Predicted: 1884
+ -- Error Percentage: 6.1286%

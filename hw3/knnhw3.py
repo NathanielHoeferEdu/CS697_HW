@@ -2,7 +2,6 @@ import logging
 
 import pandas as pd
 from sklearn import neighbors
-from sklearn.metrics import mean_squared_error
 
 logger = logging.getLogger('hw3')
 logger.setLevel(logging.DEBUG)
@@ -45,10 +44,14 @@ def train_k_nearest_neighbors(nearest_neighbor_num, x_train, y_train,
     model.fit(x_train, y_train)
     y_pred = model.predict(x_test)
 
+    total = len(y_test)
+    correct = sum(a == b for a,b in zip(y_test, y_pred))
+    error_pct = (1.0 - (float(correct) / float(total))) * 100
+
     print("K-Nearest Neighbor Classifier Model with {} nearest "
           "neighbors".format(nearest_neighbor_num))
-    print(" -- Mean squared error: "
-          "{:.6f}".format(mean_squared_error(y_test, y_pred)))
+    print(" -- Total: %d, Correctly Predicted: %d" % (total, correct))
+    print(" -- Error Percentage: %.4f%%" % (error_pct))
 
 
 if __name__ == '__main__':
