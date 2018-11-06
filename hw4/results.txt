@@ -1,0 +1,23 @@
+2018-11-05 19:54:55,031 - hw4: zip.train entry rows: 7291, columns: 256, shape: (7291, 256)
+2018-11-05 19:54:55,031 - hw4:  -- First 10 features of first entry: [-1.    -1.    -1.    -1.    -1.    -1.    -1.    -0.631  0.862 -0.167]
+2018-11-05 19:54:55,032 - hw4: zip.train labels count: 7291, shape: (7291,)
+2018-11-05 19:54:55,032 - hw4:  -- First 10 labels: [6 5 4 7 3 6 3 1 0 1]
+2018-11-05 19:54:55,121 - hw4: zip.test entry rows: 2007, columns: 256, shape: (2007, 256)
+2018-11-05 19:54:55,122 - hw4:  -- First 10 features of first entry: [-1.    -1.    -1.    -1.    -1.    -0.948 -0.561  0.148  0.384  0.904]
+2018-11-05 19:54:55,122 - hw4: zip.test labels count: 2007, shape: (2007,)
+2018-11-05 19:54:55,122 - hw4:  -- First 10 labels: [9 6 3 6 6 0 0 0 6 9]
+
+
+Calculating best C value using linear kernel via 5-fold cross validation accuracy:
+C value: 0.001  - CV Accuracies: [0.9500684  0.94178082 0.9478738  0.94371997 0.94635488], Average Accuracy: 0.945959575345
+C value: 0.01   - CV Accuracies: [0.96511628 0.95547945 0.96433471 0.9622512  0.96148556], Average Accuracy: 0.961733438876
+C value: 0.1    - CV Accuracies: [0.9630643  0.95205479 0.96159122 0.95470144 0.9607978 ], Average Accuracy: 0.95844191027
+C value: 1      - CV Accuracies: [0.95827633 0.94520548 0.95747599 0.95538778 0.95735901], Average Accuracy: 0.9547409201
+C value: 10.0   - CV Accuracies: [0.95827633 0.94520548 0.95747599 0.95538778 0.95804677], Average Accuracy: 0.954878471682
+C value: 100.0  - CV Accuracies: [0.95827633 0.94520548 0.95747599 0.95538778 0.95804677], Average Accuracy: 0.954878471682
+C value: 1000.0 - CV Accuracies: [0.95827633 0.94520548 0.95747599 0.95538778 0.95804677], Average Accuracy: 0.954878471682
+C value selected: 0.01
+
+Support Vector Machine using linear kernel and C value of 0.01
+ -- Total: 2007, Correctly Predicted: 1870
+ -- Error Percentage: 6.8261%
