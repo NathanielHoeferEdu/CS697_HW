@@ -21,3 +21,18 @@ C value selected: 0.01
 Support Vector Machine using linear kernel and C value of 0.01
  -- Total: 2007, Correctly Predicted: 1870
  -- Error Percentage: 6.8261%
+
+
+Calculating best C value using rbf kernel via 5-fold cross validation accuracy:
+C value: 0.001  - CV Accuracies: [0.16347469 0.16369863 0.16392318 0.16403569 0.16368638], Average Accuracy: 0.16376371539
+C value: 0.01   - CV Accuracies: [0.71340629 0.70890411 0.71947874 0.70967742 0.7042641 ], Average Accuracy: 0.711146131746
+C value: 0.1    - CV Accuracies: [0.9493844  0.94041096 0.94375857 0.93891558 0.94360385], Average Accuracy: 0.943214673724
+C value: 1      - CV Accuracies: [0.96990424 0.96917808 0.97325103 0.97117364 0.97455296], Average Accuracy: 0.97161199072
+C value: 10.0   - CV Accuracies: [0.98221614 0.97260274 0.98010974 0.97803706 0.97799175], Average Accuracy: 0.978191486146
+C value: 100.0  - CV Accuracies: [0.98153215 0.97328767 0.978738   0.97735072 0.97799175], Average Accuracy: 0.977780056759
+C value: 1000.0 - CV Accuracies: [0.98153215 0.9739726  0.97805213 0.97735072 0.97730399], Average Accuracy: 0.977642317268
+C value selected: 10.0
+
+Support Vector Machine using rbf kernel and C value of 10.0
+ -- Total: 2007, Correctly Predicted: 1907
+ -- Error Percentage: 4.9826%

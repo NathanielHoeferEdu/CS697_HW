@@ -16,7 +16,7 @@ logger.addHandler(ch)
 
 TRAIN_DATASET = 'zip.train'
 TEST_DATASET = 'zip.test'
-KERNEL = 'linear'
+KERNEL = 'rbf'
 CV_FOLDS = 5
 C_VALUES = [1e-3, 1e-2, 1e-1, 1, 1e1, 1e2, 1e3]
 
@@ -49,7 +49,7 @@ if __name__ == '__main__':
 
     print("Calculating best C value using {} kernel via 5-fold "
           "cross validation accuracy:".format(KERNEL))
-    model = svm.SVC(kernel=KERNEL)
+    model = svm.SVC(kernel=KERNEL, gamma='auto')
     max_c = 0
     max_cv_score = 0
     for c in C_VALUES:
